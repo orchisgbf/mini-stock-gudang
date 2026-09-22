@@ -14,6 +14,14 @@ function statusStock(stock) {
     }
 }
 
+function nilaiInventory(stock, harga) {
+    return stock * harga;
+}
+
 let stockAkhir = hitungStock(100, 50, 30);
 
 console.log(statusStock(stockAkhir));
+
+let nilai = nilaiInventory(stockAkhir, 5000);
+
+console.log(nilai);
