@@ -1,13 +1,19 @@
-function cekStock(stockAwal, masuk, keluar) {
-    let hasil  = stockAwal + masuk - keluar;
-
-    if (hasil < 0) {
-        return 0;
-      }
-
-       return hasil;
+function hitungStock(stockAwal, masuk, keluar) {
+    return stockAwal + masuk - keluar;
 }
 
-let hasil = cekStock(100, 50, 30);
+function statusStock(stock) {
+    if (stock === 0) {
+        return "KOSONG";
+    } else if (stock <= 9) {
+        return "HAMPIR HABIS";
+    } else if (stock <= 50) {
+        return "AMAN";
+    } else {
+        return "STOCK BANYAK";
+    }
+}
 
-console.log(hasil);
+let stockAkhir = hitungStock(100, 50, 30);
+
+console.log(statusStock(stockAkhir));
